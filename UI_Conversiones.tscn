@@ -1,0 +1,328 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI_Conversiones.gd" type="Script" id=1]
+[ext_resource path="res://logo-ug.png" type="Texture" id=2]
+[ext_resource path="res://fonts/normal_17.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/bold_18.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/normal_15.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.188235, 0.192157, 0.247059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="ColorRect" parent="Fondo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+color = Color( 0.12549, 0.12549, 0.12549, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Fondo"]
+margin_left = 28.5077
+margin_top = 112.398
+margin_right = 530.508
+margin_bottom = 185.398
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Fondo/VBoxContainer"]
+margin_right = 502.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 4 )
+text = "Tipo de unidades"
+
+[node name="Popup_unidades" type="MenuButton" parent="Fondo/VBoxContainer"]
+margin_top = 25.0
+margin_right = 502.0
+margin_bottom = 45.0
+items = [ "Masa y densidad", null, 0, false, false, 0, 0, null, "", false, "Longitud", null, 0, false, false, 1, 0, null, "", false, "Velocidad", null, 0, false, false, 2, 0, null, "", false, "Volumen", null, 0, false, false, 3, 0, null, "", false, "Fuerza", null, 0, false, false, 4, 0, null, "", false, "Presion", null, 0, false, false, 5, 0, null, "", false, "Energia", null, 0, false, false, 6, 0, null, "", false, "Transferencia Energia", null, 0, false, false, 7, 0, null, "", false, "Calor Especifico", null, 0, false, false, 8, 0, null, "", false, "Otros", null, 0, false, false, 9, 0, null, "", false ]
+
+[node name="Button" type="Button" parent="Fondo/VBoxContainer/Popup_unidades"]
+self_modulate = Color( 0.8, 0.8, 0.8, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 8.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Fondo/VBoxContainer/Popup_unidades/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = " Selecciona el tipo  de unidad"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Fondo"]
+margin_left = 27.7129
+margin_top = 187.305
+margin_right = 529.713
+margin_bottom = 260.305
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Fondo/VBoxContainer2"]
+margin_right = 502.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 4 )
+text = "Conversiones"
+
+[node name="Popup_conversiones" type="MenuButton" parent="Fondo/VBoxContainer2"]
+margin_top = 25.0
+margin_right = 502.0
+margin_bottom = 45.0
+items = [ "Masa y densidad", null, 0, false, false, 0, 0, null, "", false, "Longitud", null, 0, false, false, 1, 0, null, "", false, "Velocidad", null, 0, false, false, 2, 0, null, "", false, "Volumen", null, 0, false, false, 3, 0, null, "", false, "Fuerza", null, 0, false, false, 4, 0, null, "", false, "Presion", null, 0, false, false, 5, 0, null, "", false, "Energia", null, 0, false, false, 6, 0, null, "", false, "Transferencia Energia", null, 0, false, false, 7, 0, null, "", false, "Calor Especifico", null, 0, false, false, 8, 0, null, "", false, "Otros", null, 0, false, false, 9, 0, null, "", false ]
+
+[node name="Button" type="Button" parent="Fondo/VBoxContainer2/Popup_conversiones"]
+self_modulate = Color( 0.8, 0.8, 0.8, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 10.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Fondo/VBoxContainer2/Popup_conversiones/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = " Selecciona el tipo de conversion"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 1.0
+margin_top = 10.0
+margin_right = 1.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 4 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "CONVERSOR DE UNIDADES SISTEMA INTERNACIONAL / INGLES"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -60.4839
+margin_bottom = -4.48389
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin_left" type="Label" parent="HBoxContainer"]
+margin_top = 27.0
+margin_right = 100.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 150.0
+margin_right = 565.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_right = 415.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 4 )
+text = "Unidades a convertir"
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+margin_top = 25.0
+margin_right = 415.0
+margin_bottom = 56.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+custom_colors/selection_color = Color( 1, 1, 1, 1 )
+text = "Introduce el valor"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 615.0
+margin_right = 1030.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+
+[node name="ufinal" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_right = 415.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 4 )
+text = "Unidades resultantes"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 25.0
+margin_right = 415.0
+margin_bottom = 56.0
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "0.000000"
+valign = 1
+
+[node name="Margin_right" type="Label" parent="HBoxContainer"]
+margin_left = 1080.0
+margin_top = 27.0
+margin_right = 1080.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 34.0
+margin_top = 678.648
+margin_right = 1028.0
+margin_bottom = 697.648
+custom_fonts/font = ExtResource( 5 )
+text = "Adrian Tome Rodriguez, DICIS Universida de Guanajuato,, Mexico         MIT LICENSE"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 413.0
+margin_top = 376.372
+margin_right = 581.0
+margin_bottom = 417.372
+text = "CONVERTIR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Conv_history" type="VBoxContainer" parent="."]
+margin_left = 33.0
+margin_top = 542.0
+margin_right = 544.0
+margin_bottom = 639.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Conv_history"]
+margin_right = 511.0
+margin_bottom = 97.0
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 5 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 608.0
+margin_top = 543.0
+margin_right = 1055.0
+margin_bottom = 642.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2"]
+margin_right = 447.0
+margin_bottom = 99.0
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 5 )
+
+[node name="CB_history" type="CheckButton" parent="."]
+margin_left = 18.0
+margin_top = 481.659
+margin_right = 94.0
+margin_bottom = 521.659
+pressed = true
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CB_history"]
+margin_left = 13.0
+margin_top = 39.0
+margin_right = 605.0
+margin_bottom = 57.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "Historial de Conversiones"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CB_debug" type="CheckButton" parent="."]
+margin_left = 593.79
+margin_top = 483.307
+margin_right = 669.79
+margin_bottom = 523.307
+pressed = true
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CB_debug"]
+margin_left = 14.0
+margin_top = 38.0
+margin_right = 604.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "Debug"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 592.0
+margin_top = 129.737
+margin_right = 1036.0
+margin_bottom = 232.737
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="toggled" from="CB_history" to="." method="_on_CB_history_toggled"]
+[connection signal="toggled" from="CB_debug" to="." method="_on_CB_debug_toggled"]
